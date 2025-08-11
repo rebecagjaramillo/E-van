@@ -95,3 +95,52 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+# Notas dev
+
+1. Cambiar versión de Java
+
+$env:JAVA_HOME="C:\Program Files\Java\jdk-17"
+$env:Path="$env:JAVA_HOME\bin;$env:Path"
+java -version
+
+2. Ejecutar app en Android
+
+npx react-native run-android
+
+3. Iniciar Metro Bundler
+
+npx react-native start
+
+4. Reiniciar Metro con limpieza
+
+npx react-native start --reset-cache
+
+5. Limpiar compilación de Android
+
+cd android
+./gradlew clean
+
+6. Ver dispositivos conectados
+
+adb devices
+
+7. Reiniciar servidor ADB
+
+adb kill-server
+adb start-server
+
+8. Limpieza completa
+
+# 1. Cerrar todas las terminales
+# 2. Borrar cachés y builds
+Remove-Item -Recurse -Force .\node_modules\
+Remove-Item -Recurse -Force .\android\.gradle\
+Remove-Item -Recurse -Force .\android\app\build\
+watchman watch-del-all
+npm cache clean --force
+
+# 3. Reinstalar dependencias
+npm install
+cd android && gradlew clean
+cd .. && npx react-native start --reset-cache

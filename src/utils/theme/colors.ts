@@ -1,33 +1,37 @@
-export const Colors = {
+export const colors = {
 
-  // Paleta de la marca
+  // --- Colores de la Marca ---
   brand: {
-    primary: '#E2001A',      
-    secondary: '#D32F2F',    
-    text: '#FFFFFF',         
+    primary: '#000000',
+    secondary: '#FFFFFF',
+    accent: '#D90429', 
   },
 
-  // Colores principales de la interfaz de usuario
+  // --- Colores de la Interfaz de Usuario ---
   ui: {
-    background: '#FFFFFF',   
-    backgroundLight: '#F8F8F8', 
-    border: '#E0E0E0',       
-    overlay: 'rgba(0, 0, 0, 0.5)', 
+    background: '#000000',
+    surface: '#1A1A1A',
+    border: '#333333',
+    disabled: '#555555',
+    inputBackground: '#2C2C2C',
+    placeholder: '#888888',
   },
 
-  // Colores para textos
+  // --- Colores de Texto ---
   text: {
-    primary: '#1A1A1A',      
-    secondary: '#6B6B6B',    
-    label: '#B3B3B3',        
-    error: '#C62828',        
+    primary: '#000000',
+    primaryInverse: '#FFFFFF',
+    secondary: '#B3B3B3',
+    disabled: '#555555',
+    link: '#FFFFFF',
+    error: '#EF4444', 
   },
 
-  // Colores de estado (para notificaciones, iconos, etc.)
-  status: {
-    success: '#4CAF50',      
-    warning: '#FFC107',      
-    info: '#2196F3',         
+  // --- Colores de Feedback y Estado ---
+  feedback: {
+    success: '#22C55E', 
+    error: '#EF4444', 
+    warning: '#F59E0B', 
+    info: '#3B82F6',
   },
-  
 };
