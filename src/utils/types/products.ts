@@ -7,7 +7,7 @@ export interface Product {
   name: string;
   price: number;
   description?: string;
-  images: ProductImage[];
+  images: ImageSourcePropType[];
   rating: number;
   reviewsCount?: number;
   category?: string;
